@@ -30,23 +30,7 @@ public class Main {
         }
         
         
-        for(int k = 1; k <= num; k++) {
-            for(int a = 1; a <= num; a++) {
-                for(int b = 1; b <= num; b++) {
-                    if((a == k) || (b == k)) continue;
-                    graph[a][b] = Math.min(graph[a][b], (graph[a][k] + graph[k][b]));
-                    //test
-                    System.out.println("check: "+ a + " " + b + " " + graph[a][b]);
-                }
-            }
-        }
         
-        
-        for(int n = 1; n <= num; n++) {
-            for(int m = 1; m <= num; m++){
-                System.out.print(graph[n][m]);
-                if(m < num) System.out.print(" ");
-            }
             System.out.println();
         }
 
