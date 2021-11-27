@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.lang.Math;
 
-public class Main {
+public class Kanpsack {
 
     public static void main(String[] args) throws IOException {
         
