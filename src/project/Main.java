@@ -12,38 +12,19 @@ public class Main {
         
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
-        st = new StringTokenizer(br.readLine(), ", ");
-        int num = st.countTokens();
-        int money = Integer.parseInt(br.readLine());
-        int[] coin = new int[num+1];
-        for(int i = 1; i < num+1; i++){
+        st = new StringTokenizer(br.readLine());
+        int num = Integer.parseInt(st.nextToken());
+        int weight = Integer.parseInt(st.nextToken());
+        int[][] stuff = new int[num][2];
+        for(int i = 1; i < num; i++){
             coin[i] = Integer.parseInt(st.nextToken());
         }
         
-        System.out.println(coinChange(coin, money, num));
+        System.out.println();
         
         //test case
         
     
-    }
-    
-    private static int coinChange(int[] coin, int money, int num) {
-        int[] c = new int[money+1];
-        c[0] = 0;
-        for(int a=1; a < c.length; a++) {
-            c[a] = 200000;  //초기화
-        }
-        
-        for(int i =1; i <= money; i++) {
-            for(int ii=1; ii <= num; ii++) {
-                if((coin[ii] <= i) && (c[i - coin[ii]] + 1 < c[i])) {
-                    c[i] = c[i - coin[ii]] + 1;
-                }
-            }
-        }
-        
-        
-        return c[money];
     }
 
 }
